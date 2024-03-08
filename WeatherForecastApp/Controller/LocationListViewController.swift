@@ -23,7 +23,7 @@ class LocationListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    func saveLocations(){
+    func saveLocations() {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(weatherLocations){
             UserDefaults.standard.set(encoded, forKey: "weatherLocations")
@@ -33,6 +33,7 @@ class LocationListViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         selectedLocationIndex = tableView.indexPathForSelectedRow! .row
+        saveLocations()
     }
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
@@ -103,13 +104,13 @@ extension LocationListViewController: GMSAutocompleteViewControllerDelegate {
     dismiss(animated: true, completion: nil)
   }
 
-  // Turn the network activity indicator on and off again.
-  func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-    UIApplication.shared.isNetworkActivityIndicatorVisible = true
-  }
-
-  func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-    UIApplication.shared.isNetworkActivityIndicatorVisible = false
-  }
+//  // Turn the network activity indicator on and off again.
+//  func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+//    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//  }
+//
+//  func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+//    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+//  }
 
 }

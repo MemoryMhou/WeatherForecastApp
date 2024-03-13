@@ -8,7 +8,12 @@ import Foundation
 import UIKit
 import GooglePlaces
 
-
+private let dateFormatter: DateFormatter = {
+    print("i just printed a date formater")
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEE, MMM d"
+    return dateFormatter
+}()
 class LocationDetailViewController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -17,7 +22,7 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
-    
+    @IBOutlet weak var tableView: UITableView!
     //var weatherLocation: WeatherLocation = WeatherLocation(name: "Current Location", latitude: 0.0, longitude: 0.0)
     //var weatherLocations: [WeatherLocation] = []
     var weatherDetail: WeatherDetail!
@@ -25,10 +30,21 @@ class LocationDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // weatherLocations.append(weatherLocation)
+       clearUserInterface()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         
         updateUserInterface()
+    }
+    
+    func clearUserInterface(){
+        dateLabel.text = ""
+        placeLabel.text = ""
+        temperatureLabel.text = ""
+        summaryLabel.text = ""
+        imageView.image = UIImage()
     }
  
     func updateUserInterface(){
@@ -43,10 +59,14 @@ class LocationDetailViewController: UIViewController {
         
         weatherDetail.getData {
             DispatchQueue.main.async {
-                self.dateLabel.text = self.weatherDetail.timezone
+                dateFormatter.timeZone = TimeZone(identifier: self.weatherDetail.timezone)
+                let usableDate = Date(timeIntervalSince1970: self.weatherDetail.currentTime)
+                self.dateLabel.text = dateFormatter.string(from: usableDate)
                 self.placeLabel.text = self.weatherDetail.name
                 self.temperatureLabel.text = "\(self.weatherDetail.temperature)°"
                 self.summaryLabel.text = self.weatherDetail.summary
+                self.imageView.image = UIImage(named: self.weatherDetail.dayIcon)
+                self.tableView.reloadData()
             }
 
         }
@@ -79,5 +99,20 @@ class LocationDetailViewController: UIViewController {
         
         pageViewController.setViewControllers([pageViewController.createLocationDetailViewController(forPage: sender.currentPage)], direction: direction, animated: true, completion: nil)
         
+    }
+}
+extension LocationDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return weatherDetail.dailyWeatherData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DailyTableViewCell
+        cell.dailyWeather = weatherDetail.dailyWeatherData[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

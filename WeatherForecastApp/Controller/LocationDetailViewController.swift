@@ -24,8 +24,7 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
-    //var weatherLocation: WeatherLocation = WeatherLocation(name: "Current Location", latitude: 0.0, longitude: 0.0)
-    //var weatherLocations: [WeatherLocation] = []
+ 
     var weatherDetail: WeatherDetail!
     var locationIndex = 0
     
@@ -35,9 +34,7 @@ class LocationDetailViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
-//        
+     
         updateUserInterface()
     }
     
@@ -69,7 +66,7 @@ class LocationDetailViewController: UIViewController {
                 self.summaryLabel.text = self.weatherDetail.summary
                 self.imageView.image = UIImage(named: self.weatherDetail.dayIcon)
                 self.tableView.reloadData()
-               // self.collectionView.reloadData()
+              
             }
 
         }
@@ -120,16 +117,3 @@ extension LocationDetailViewController: UITableViewDelegate, UITableViewDataSour
     }
 }
 
-//extension LocationDetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        return weatherDetail.dailyWeatherData.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let hourlyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCell", for: indexPath)
-//        return hourlyCell
-//    }
-//
-//
-//}

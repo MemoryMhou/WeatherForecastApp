@@ -60,17 +60,17 @@ class WeatherDetail: WeatherLocation {
         
         print("😇 we are accessing the url \(urlString)")
         
-        // Create a URL
+        
         guard let url = URL(string: urlString) else {
             print ("Error: could not create a URL from \(urlString)")
             completed()
             return
         }
         
-        // Create session
+      
         let session = URLSession.shared
         
-        // Get data with .dataTask method
+       
         let task = session.dataTask(with: url) { (data, response, error) in
             if let error = error {
                 print ("Error: \(error.localizedDescription)")

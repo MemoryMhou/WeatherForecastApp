@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C2A24714-46FA-4AFE-B1F1-A887B17EBA21"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F005367-1842-4E54-990E-D52E586137DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherForecastApp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8F005367-1842-4E54-990E-D52E586137DB - eca0cade09df41c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecastApp.ViewController.editBarButton.getter : Swift.Optional&lt;__C.UIToolbar&gt;"
+                  moduleName = "WeatherForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memorymhou/Desktop/WeatherForecastApp/WeatherForecastApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "8F005367-1842-4E54-990E-D52E586137DB - 5b5a9536b3050df3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecastApp.ViewController.editBarButton.setter : Swift.Optional&lt;__C.UIToolbar&gt;"
+                  moduleName = "WeatherForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memorymhou/Desktop/WeatherForecastApp/WeatherForecastApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "8F005367-1842-4E54-990E-D52E586137DB - b1d883a6179020c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecastApp.ViewController.editBarButton.modify : Swift.Optional&lt;__C.UIToolbar&gt;"
+                  moduleName = "WeatherForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memorymhou/Desktop/WeatherForecastApp/WeatherForecastApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "8F005367-1842-4E54-990E-D52E586137DB - d178a779fb27d087"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecastApp.ViewController.editBarButton.modify : Swift.Optional&lt;__C.UIToolbar&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "WeatherForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memorymhou/Desktop/WeatherForecastApp/WeatherForecastApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "8F005367-1842-4E54-990E-D52E586137DB - 3fb5a7067c751714"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecastApp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; WeatherForecastApp.ViewController"
+                  moduleName = "WeatherForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memorymhou/Desktop/WeatherForecastApp/WeatherForecastApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "8F005367-1842-4E54-990E-D52E586137DB - 1666c7828f278456"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherForecastApp.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WeatherForecastApp.ViewController&gt;"
+                  moduleName = "WeatherForecastApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/memorymhou/Desktop/WeatherForecastApp/WeatherForecastApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "137">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
